@@ -419,7 +419,7 @@ Cflags: ' > $PREFIX/lib/pkgconfig/id3tag.pc
   [ -e $HOME/$ARCH/include/mbedtls-disabled ] && mv $HOME/$ARCH/include/mbedtls-disabled $HOME/$ARCH/include/mbedtls
   [ -e $HOME/$ARCH/include/GLES3-disabled ] && mv $HOME/$ARCH/include/GLES3-disabled $HOME/$ARCH/include/GLES3
   [ -e $HOME/$ARCH/include/irrlicht-disabled ] && mv $HOME/$ARCH/include/irrlicht-disabled $HOME/$ARCH/include/irrlicht
-  [ -e $HOME/$ARCH/include/disabled-lua ] && mv $HOME/$ARCH/include/disabled-lua/* $HOME/$ARCH/include && rmdir $HOME/$ARCH/include/disabled-lua
+  [ -e $HOME/$ARCH/include/disabled-lua ] && find $HOME/$ARCH/include/disabled-lua -maxdepth 1 -mindepth 1 -exec mv '{}' $HOME/$ARCH/include/ ';' && rmdir $HOME/$ARCH/include/disabled-lua
   [ -e $HOME/$ARCH/include/tinyxml-disabled.h ] && mv  $HOME/$ARCH/include/tinyxml-disabled.h $HOME/$ARCH/include/tinyxml.h 
   [ -e $HOME/$ARCH/include/zita-resampler-disabled ] && mv $HOME/$ARCH/include/zita-resampler-disabled $HOME/$ARCH/include/zita-resampler
   [ -e $HOME/$ARCH/include/fluidsynth-disabled ] && mv $HOME/$ARCH/include/fluidsynth-disabled $HOME/$ARCH/include/fluidsynth
@@ -1222,11 +1222,12 @@ pwd && sleep 5
   [ -e gtk-sharp.snk ] &&  ./bootstrap-2.12 --prefix=$PREFIX --sysconfdir=/$PREFIX/etc --disable-static
   [ -e geoip.pc.in ] &&  ./bootstrap
 
-  if [ -e dddoc/xmoto.6 ] 
+  if [ -e dddoc/xmoto.6 ]
   then
+    rm -rf build
     mkdir build
     cd build
-    cmake ../ -GNinja -DCMAKE_INSTALL_PREFIX=$PREFIX || exit 5
+    cmake ../ -GNinja -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_PREFIX_PATH=$HOME/$ARCH || exit 5
     ninja || exit 1
     ninja xmoto_pack
     ninja install
@@ -2867,6 +2868,7 @@ Cflags: -I${includedir}' > lua.pc
      	ninja || exit 1
      	# PYTHONPATH="" ninja || exit 1
 	echo "Running ninja install"
+	which update-desktop-database 2>/dev/null || { printf '#!/bin/sh\n' > $HOME/$ARCH/bin/update-desktop-database && chmod +x $HOME/$ARCH/bin/update-desktop-database; }
      	ninja install || exit 1
 	echo "ninja install done"
 	echo "Install to $pkgdir"

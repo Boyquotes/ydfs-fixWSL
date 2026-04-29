@@ -1,6 +1,12 @@
+https://www.libsdl.org/release/SDL-1.2.15.tar.gz
+https://www.libsdl.org/projects/SDL_mixer/release/SDL_mixer-1.2.12.tar.gz
+https://www.libsdl.org/projects/SDL_net/release/SDL_net-1.2.7.tar.gz
+https://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.11.tar.gz
 xmoto-0.6.1.tar.gz::https://github.com/xmoto/xmoto/archive/0.6.1.tar.gz
 https://gcompris.net/download/qt/src/gcompris-qt-2.4.tar.xz
-http://freefr.dl.sourceforge.net/project/extremetuxracer/releases/0.8.1/etr-0.8.1.tar.xz 
+https://github.com/kcat/openal-soft/archive/openal-soft-1.20.1.tar.gz
+https://www.sfml-dev.org/files/SFML-2.5.1-sources.zip
+http://freefr.dl.sourceforge.net/project/extremetuxracer/releases/0.8.1/etr-0.8.1.tar.xz
 #JUMP
 https://github.com/supertuxkart/stk-code/releases/download/1.4/SuperTuxKart-1.4-src.tar.xz
 CalcMySky-0.1.0.tar.gz::https://github.com/10110111/CalcMySky/archive/v0.1.0.tar.gz
