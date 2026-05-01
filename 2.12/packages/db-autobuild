@@ -2852,6 +2852,7 @@ Cflags: -I${includedir}' > lua.pc
     if [ -e "meson.build" ]
     then
 	echo "Running meson.build"
+	[ -e build ] && rm -rf build
 	mkdir build
 	cd build
         # [ "$ARCH" = "x86" ] && LC_CONFIGURE_OPTS="$LC_CONFIGURE_OPTS --libdir=lib"

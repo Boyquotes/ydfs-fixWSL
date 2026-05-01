@@ -12,19 +12,28 @@ https://github.com/mate-desktop/marco/releases/download/v1.28.1/marco-1.28.1.tar
 https://github.com/mate-desktop/mate-settings-daemon/releases/download/v1.28.0/mate-settings-daemon-1.28.0.tar.xz
 https://github.com/mate-desktop/mate-control-center/archive/refs/tags/v1.28.1.tar.gz
 https://github.com/mate-desktop/libmatemixer/releases/download/v1.28.0/libmatemixer-1.28.0.tar.xz
+https://github.com/rockdaboot/libpsl/releases/download/0.21.1/libpsl-0.21.1.tar.gz
+https://download.gnome.org/sources/libsoup/2.74/libsoup-2.74.2.tar.xz
 https://github.com/mate-desktop/libmateweather/releases/download/v1.28.0/libmateweather-1.28.0.tar.xz
 https://github.com/mate-desktop/caja-extensions/releases/download/v1.28.0/caja-extensions-1.28.0.tar.xz
+https://download.gnome.org/sources/libwnck/40/libwnck-40.1.tar.xz
 https://pub.mate-desktop.org/releases/1.26/mate-panel-1.26.4.tar.xz
 https://github.com/mate-desktop/mate-notification-daemon/releases/download/v1.28.0/mate-notification-daemon-1.28.0.tar.xz
 https://github.com/mate-desktop/mate-session-manager/releases/download/v1.28.0/mate-session-manager-1.28.0.tar.xz
 https://github.com/mate-desktop/mate-media/releases/download/v1.28.0/mate-media-1.28.0.tar.xz
 https://github.com/mate-desktop/mate-backgrounds/releases/download/v1.28.0/mate-backgrounds-1.28.0.tar.xz
 https://pub.mate-desktop.org/releases/1.27/mate-terminal-1.27.1.tar.xz  #SKIP-x86_64#
+https://gitlab.gnome.org/GNOME/vte/-/archive/0.72.4/vte-0.72.4.tar.bz2
 https://github.com/mate-desktop/mate-terminal/releases/download/v1.28.0/mate-terminal-1.28.0.tar.xz  #SKIP-x86#
+https://gitlab.gnome.org/GNOME/libpeas.git#commit=6b4217e0a5ec451cdbe9380df26d701d8e6bdf88
 https://github.com/mate-desktop/eom/releases/download/v1.28.0/eom-1.28.0.tar.xz 
+https://github.com/AbiWord/enchant/releases/download/v2.3.2/enchant-2.3.2.tar.gz
+https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.0.tar.xz
 https://github.com/mate-desktop/pluma/releases/download/v1.28.0/pluma-1.28.0.tar.xz
 https://github.com/mate-desktop/pluma-plugins/releases/download/v1.28.0/pluma-plugins-1.28.0.tar.xz
 https://github.com/mate-desktop/engrampa/releases/download/v1.28.0/engrampa-1.28.0.tar.xz
+libblockdev-2.28.tar.gz::https://github.com/rhinstaller/libblockdev/archive/2.28-1.tar.gz
+https://github.com/storaged-project/udisks/archive/udisks-2.9.4.tar.gz
 https://github.com/mate-desktop/mate-utils/releases/download/v1.28.0/mate-utils-1.28.0.tar.xz
 https://github.com/mate-desktop/mozo/releases/download/v1.28.0/mozo-1.28.0.tar.xz
 https://github.com/mate-desktop/mate-themes/releases/download/v3.22.24/mate-themes-3.22.24.tar.xz

@@ -65,7 +65,7 @@ echo $ARCHIVE | grep libopenshot &&  LC_CONFIGURE_OPTS="-DLIBOPENSHOT_AUDIO_BASE
 echo $ARCHIVE | grep kmod-33 &&  LC_CONFIGURE_OPTS="  --with-xz         \
             --with-zstd       \
             --with-zlib --disable-manpages " 
-echo $ARCHIVE | grep caja-extensions &&  LC_CONFIGURE_OPTS="--disable-gksu"
+echo $ARCHIVE | grep caja-extensions &&  LC_CONFIGURE_OPTS="--disable-gksu --disable-av"
 echo $ARCHIVE | grep SDL_sound-1 &&  LC_CONFIGURE_OPTS="--disable-physfs"
 echo $ARCHIVE | grep libssh-0 &&  LC_CONFIGURE_OPTS="-DWITH_GSSAPI=OFF"
 echo $ARCHIVE | grep mate-terminal &&  LC_CONFIGURE_OPTS="--enable-debug"
@@ -145,7 +145,7 @@ echo $ARCHIVE | grep libpwquality &&  LC_CONFIGURE_OPTS="--disable-python-bindin
 echo $ARCHIVE | grep ndctl &&  LC_CONFIGURE_OPTS="--disable-docs --without-systemd"
 echo $ARCHIVE | grep libmtp &&  LC_CONFIGURE_OPTS="--with-udev=$HOME/$ARCH/lib/udev"
 echo $ARCHIVE | grep mm-common &&  LC_CONFIGURE_OPTS="-Duse-network=true"
-echo $ARCHIVE | grep libblockdev &&  LC_CONFIGURE_OPTS="--without-lvm_dbus --without-dmraid -without-gtk-doc  --disable-introspection"
+echo $ARCHIVE | grep libblockdev &&  LC_CONFIGURE_OPTS="--without-lvm_dbus --without-dmraid --without-gtk-doc --disable-introspection --without-crypto --without-dm --without-mpath --without-part --without-nvdimm"
 echo $ARCHIVE | grep librevenge &&  LC_CONFIGURE_OPTS="--disable-werror"
 echo $ARCHIVE | grep gmp-6 && [ "$ARCH" == "x86" ] && export ABI=32 && LC_CONFIGURE_OPTS="--disable-werror "
 echo $ARCHIVE | grep gmp-6 && LC_CONFIGURE_OPTS="$LC_CONFIGURE_OPTS --enable-fat  --enable-cxx"
@@ -173,6 +173,7 @@ echo $ARCHIVE | grep gegl-0 &&  LC_CONFIGURE_OPTS="-Ddocs=false "
 echo $ARCHIVE | grep gegl-0 && [ -e $HOME/$ARCH/share/gir-1.0/Babl-0.1.gir ] && [ ! -e $HOME/$ARCH/share/gir-1.0/babl-0.1.gir ] && cp $HOME/$ARCH/share/gir-1.0/Babl-0.1.gir $HOME/$ARCH/share/gir-1.0/babl-0.1.gir
 # ostree with soup3 fails !!!!"
 echo $ARCHIVE | grep ostree &&  LC_CONFIGURE_OPTS="--with-openssl --disable-otmpfile --with-curl --without-soup3"
+echo $ARCHIVE | grep libsoup-2 && LC_CONFIGURE_OPTS="-Dtls_check=false -Dtests=false"
 echo $ARCHIVE | grep tracker-3 &&  LC_CONFIGURE_OPTS="-Dsystemd_user_services=false -Ddocs=false -Dman=false"
 echo $ARCHIVE | grep caca &&  LC_CONFIGURE_OPTS="--disable-java --disable-doc"
 echo $ARCHIVE | grep libe-book &&  LC_CONFIGURE_OPTS="--disable-werror"
